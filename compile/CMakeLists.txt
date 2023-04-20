@@ -18,7 +18,7 @@ if (MSVC)
     add_compile_options(/W4)
 else()
     # additional warnings
-    add_compile_options(-Wall -Wextra -Wpedantic -O2 -pthreads)
+    add_compile_options(-Wall -Wextra -Wpedantic -O2 -pthread)
 endif()
 include_directories(${CMAKE_SOURCE_DIR}/../headers
                     ${CMAKE_SOURCE_DIR}/../Timer)
