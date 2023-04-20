@@ -13,6 +13,7 @@ endif()
 
 set(CMAKE_DEBUG_POSTFIX d)
 add_compile_definitions(_USE_MATH_DEFINES)
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
 if (MSVC)
     # warning level 4
     add_compile_options(/W4)
@@ -20,6 +21,7 @@ else()
     # additional warnings
     add_compile_options(-Wall -Wextra -Wpedantic -O2 -pthread)
 endif()
+
 include_directories(${CMAKE_SOURCE_DIR}/../headers
                     ${CMAKE_SOURCE_DIR}/../Timer)
 
