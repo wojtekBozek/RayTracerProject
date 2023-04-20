@@ -77,7 +77,7 @@ void Renderer::renderThreads(RenderedScene &scene, Scene& world_scene,
                             const uint8_t samples, std::shared_ptr<Camera> camera)
 {
     std::vector<std::thread> threads;
-
+    std::cout <<"Rendering started\n";
     for(unsigned int thread = 0; thread < threadsMax; thread++)
     {
         threads.emplace_back([this, thread, &scene, &world_scene, &camera, samples] 
@@ -86,6 +86,7 @@ void Renderer::renderThreads(RenderedScene &scene, Scene& world_scene,
                              this->renderPart(scene, world_scene, samples, camera, y_start, y_end, x_start, x_end);});
     }
     for (auto& thread: threads) thread.join();
+    std::cout <<"Rendering finished\n";
 }
 
 void Renderer::getPartDim(RenderedScene &scene, uint32_t& y_start, uint32_t& y_end,

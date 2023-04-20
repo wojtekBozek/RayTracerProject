@@ -31,6 +31,7 @@ int convertRGBtoPPMFormat(const float value)
 
 void RenderSaver::save(const RenderedScene& scene) const
 {
+    std::cout << "Saving...\n";
     int ny = scene.getHeight();
     int nx = scene.getWidth();
     std::ofstream renderOutcome;
@@ -48,4 +49,5 @@ void RenderSaver::save(const RenderedScene& scene) const
         }
     }
     renderOutcome.close();
+    std::cout << "Saved.\n";
 }
