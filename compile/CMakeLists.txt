@@ -1,9 +1,17 @@
 cmake_minimum_required(VERSION 3.12.0)
 
 project (MyRayTracer)
+
+
 set(CMAKE_DEBUG_POSTFIX d)
 add_compile_definitions(_USE_MATH_DEFINES)
-
+if (MSVC)
+    # warning level 4
+    add_compile_options(/W4)
+else()
+    # additional warnings
+    add_compile_options(-Wall -Wextra -Wpedantic)
+endif()
 include_directories(${CMAKE_SOURCE_DIR}/../headers
                     ${CMAKE_SOURCE_DIR}/../Timer)
 
