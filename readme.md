@@ -17,6 +17,7 @@ The proposed solution is under no term finished, as numerous new things may be i
 - implementation of differnet lighting model.
 - possible changes to the way reflective and refractive materials have been implemented.
 - adding and testing emissive property in Phong model as it wasn't properly implemented, used and tested yet.
+- Disney principled BRDF.
 - Accelerating structures.
 - Triangle and triangle meshes. 
 - loading meshes and their material properties from obj or other files format.
