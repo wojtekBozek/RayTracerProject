@@ -9,7 +9,7 @@ Main bases of information was Piter Shirley book: "Ray Tracing in One Weekend" h
 As such all my codeis also available under the Fair Use terms. I also encourage you to contact me in case of any questions, comments and suggestions. All feedback, especially concerning any programming habbits, tips or messages of concern regarding some of proposed solutions are welcome. 
 
 The proposed solution is under no term finished, as numerous new things may be implemented. These includes such concepts as:
-- implementing materials with scatter funcion [DO it now!!!]
+- implementing materials with scatter funcion.
 - movable and rotatable camera that was under development but for now was scrapted due to poor results.
 - implementing real path-tracing algorithm.
 - implementation of differnet lighting model.
