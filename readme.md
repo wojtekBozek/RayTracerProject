@@ -2,7 +2,7 @@ Author: Wojtek B. (email: wboojztee@gmail.com)
 
 Copyright (c) 2023
 
-Created with usage of code editor Visual Studio Code using MSBuild .exe to compile realese and debug. After some fun with CMake I managed to compile my project from CMakeLists on WSL. I prefer to store CMakeList in separate directory, hence compile directory in a project. I will possibly create some .bat and .bash scripts for smoother configuration. Currently proposed procedure: mkdir build, then: cmake ../compile/
+Created with usage of code editor Visual Studio Code using MSBuild .exe to compile realese and debug. After some fun with CMake I managed to compile my project from CMakeLists on WSL, I hope it will be cross platform to some degree. I prefer to store CMakeList in separate directory, hence compile directory in a project. I will possibly create some .bat and .bash scripts for smoother configuration. Currently proposed procedure: mkdir build, then: cmake ../compile/
 
 These CPU Ray-Tracer project was created as my own goal to obtain knowlegde and understanding of basic concept related to computer graphics, as well as to gain more understanding of OOP. The project was intended to not relly on any external libraries like glm.
 
