@@ -14,7 +14,7 @@
 #include <cmath>
 #include <stdlib.h>
 #include "Material.hpp"
-#include "pointlight.hpp"
+#include "pointLight.hpp"
 #include "shape.hpp"
 
 class PointLightVisible : public PointLight, public Material, public Shape, public std::enable_shared_from_this<PointLightVisible>
