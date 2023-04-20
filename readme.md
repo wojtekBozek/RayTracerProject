@@ -22,5 +22,6 @@ The proposed solution is under no term finished, as numerous new things may be i
 - Triangle and triangle meshes. 
 - loading meshes and their material properties from obj or other files format.
 - Writing to different file type, e.g. png, jpg.
+- And of course user interface
 
 As such the current phase of project will serve as my base for further getting knowledge in computer graphics.
