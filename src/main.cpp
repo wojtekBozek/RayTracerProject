@@ -69,7 +69,7 @@ int main(int argc, char* argv[])
                                                      Vector3f(0.0f, 0.0f, 0.0f),
                                                      Vector3f(0.0f, 0.0f, 0.0f),
                                                      Vector3f(0.0f, 0.0f, 0.6f),0.0f);
-    Matrix4x4f<float> matrix(1.0f, 10.0f, 10.0f);
+    Matrix4x4f<float> matrix(1.0f, -10.0f, 10.0f);
     DistantLight light(matrix,Vector3f(1.0f),1.0f);
     Matrix4x4f<float> matrix2(0.0f, 0.8f, 2.0f);
     PointLightVisible lightP(matrix2, Vector3f(1.0f), 1.0f);
@@ -107,8 +107,8 @@ int main(int argc, char* argv[])
     
     Renderer renderer(10);
     renderer.appendLight(light1);
-    //renderer.appendLight(light2);
-    //renderer.appendLight(light3);
+    renderer.appendLight(light2);
+    renderer.appendLight(light3);
 
     time(renderer.renderThreads(*scene, world_scene, static_cast<uint8_t>(5), cam));
     std::string name = "h_"+ std::to_string(heigth) + "_w_" + std::to_string(width) + "_z_" + dist + ".ppm";
