@@ -21,6 +21,9 @@
 #include <memory>  
 #include <string>
 
+#define DEFAULT_WIDTH 100
+#define DEFAUTL_HEIGHT 80
+
 #ifndef NDEBUG
     #define time(x){ Timer *timer1 = new Timer(); x; delete(timer1);}
 #else
@@ -37,8 +40,8 @@ void checkDimension(uint32_t &dim)
 
 int main(int argc, char* argv[])
 {
-        uint32_t heigth = 80;
-        uint32_t width = 100;
+        uint32_t heigth = DEFAUTL_HEIGHT;
+        uint32_t width = DEFAULT_WIDTH;
         float dist_z = 10.0f;
         std::string dist = "10";
     if(argc >= 3)
