@@ -171,7 +171,7 @@ Pixel Renderer::checkLight(const hitRecord& record,const Ray& ray, Scene world_s
         str = 1.0f-record.ref_strenght;
         for(const auto& light : lights)
         {
-        if(world_scene.inLight(light, record))
+            if(world_scene.inLight(light, record))
             {
                 pixel += str*color(ray, record, light);
             }
@@ -184,10 +184,10 @@ Pixel Renderer::checkLight(const hitRecord& record,const Ray& ray, Scene world_s
 
 Vector3f getRandomDirection()
 {
-float x = myMath::getRandomFloatInRange(-1.0f, 1.0f);
-float y = myMath::getRandomFloatInRange(-1.0f, 1.0f);
-float z = myMath::getRandomFloatInRange(-1.0f, 1.0f);
-return Vector3f(x,y,z);
+    float x = myMath::getRandomFloatInRange(-1.0f, 1.0f);
+    float y = myMath::getRandomFloatInRange(-1.0f, 1.0f);
+    float z = myMath::getRandomFloatInRange(-1.0f, 1.0f);
+    return Vector3f(x,y,z);
 }
 
 void Renderer::checkReflective(const hitRecord& record,const Ray& ray, Scene world_scene, int stop, Pixel& pixel, float& str)
@@ -210,7 +210,8 @@ Vector3f Renderer::reflect(const Vector3f &I, const Vector3f &N)
     return I - 2 * I.dotProduct(N) * N; 
 }
 
-void Renderer::checkRefractive(const hitRecord& record,const Ray& ray, Scene world_scene, int stop, Pixel& pixel, float& refracted)
+void Renderer::checkRefractive(const hitRecord& record,const Ray& ray, Scene world_scene, 
+                               int stop, Pixel& pixel, float& refracted)
 {
     float cos_theta = ray.getDirection().dotProduct(record.normal);
     float offset  = 1.0f;
@@ -224,11 +225,11 @@ void Renderer::checkRefractive(const hitRecord& record,const Ray& ray, Scene wor
     hitRecord t_record = world_scene.intersect(t_ray);
     if(t_record.hasHit!=true)
     {
-       pixel += refracted* world_scene.getColor();    
+       pixel += refracted*world_scene.getColor();    
     }
     else 
     {
-        pixel += refracted * checkLight(t_record, t_ray, world_scene, stop+1);
+        pixel += refracted*checkLight(t_record, t_ray, world_scene, stop+1);
     }
 }
 
