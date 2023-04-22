@@ -156,18 +156,19 @@ Pixel Renderer::checkLight(const hitRecord& record,const Ray& ray, Scene world_s
             return pixel += record.ref_strenght * world_scene.getColor();
     }
     else
-    {   
+    {   //rrefraction check
         float refracted = 0.0f;
         if(record.refraction_index>=1.0f)
         {
             checkRefractive(record, ray, world_scene, stop, pixel, refracted);
         }
+        //reflections check
         float str = record.ref_strenght - refracted;
         if(str > 0.0f)
         {
             checkReflective(record, ray, world_scene, stop, pixel, str);
         }
-         
+        //properties check
         str = 1.0f-record.ref_strenght;
         for(const auto& light : lights)
         {
