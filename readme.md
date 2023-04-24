@@ -1,3 +1,5 @@
+My Ray Tracer project:
+
 ![alt text](https://github.com/wojtekBozek/RayTracerProject/blob/main/graphic/RayTracer.png?raw=true)
 
 Author: Wojtek B. (email: wboojztee@gmail.com)
