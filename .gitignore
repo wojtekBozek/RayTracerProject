@@ -1,6 +1,7 @@
 *.exe
 *.pdb
 /Debug
+/build
 /CMakeFiles
 /MyRayTracer.dir
 /x64
