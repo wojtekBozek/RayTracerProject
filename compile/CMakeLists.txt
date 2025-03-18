@@ -13,6 +13,7 @@ endif()
 
 set(CMAKE_DEBUG_POSTFIX d)
 add_compile_definitions(_USE_MATH_DEFINES)
+add_compile_options(-include cstdint)
 SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
 if (MSVC)
     # warning level 4
